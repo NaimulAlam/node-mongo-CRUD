@@ -3,10 +3,8 @@ const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const ObjectID = require("mongodb").ObjectID
 
-const Password = "";
 
-const uri =
-  "mongodb+srv://naimDb:XsY5J9x_$rjPqBv@cluster0.dspyj.mongodb.net/organicDb?retryWrites=true&w=majority";
+const uri =`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.dspyj.mongodb.net/organicDb?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
